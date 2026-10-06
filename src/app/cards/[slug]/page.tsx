@@ -7,6 +7,9 @@ import { DivCard } from "@/components/DivCard";
 import { GameText } from "@/components/GameText";
 
 export const revalidate = 3600;
+// Only the cards known at build time: an unknown slug is a static 404, never a render.
+// Cards added to the API appear with the next deploy.
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const { cards } = await getExport();

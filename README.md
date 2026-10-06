@@ -96,6 +96,9 @@ Every page is static and regenerated at most once per hour from `/export/cards.j
 (incremental static regeneration), so the API receives a few requests per hour no matter
 the traffic.
 
+Card pages are generated for the cards known at build time; any other `/cards/...` address
+is a static 404. When the API publishes a dataset with new cards, redeploy the site.
+
 ## License
 
 The source code is released under the [MIT License](LICENSE). Card names, texts and artwork are the
