@@ -1,0 +1,3 @@
+allowBuilds:
+  # Its postinstall only fetches the native binding when the platform package is missing.
+  unrs-resolver: false

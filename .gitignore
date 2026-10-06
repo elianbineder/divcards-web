@@ -1,0 +1,23 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# coding-agent instructions that `next dev` writes when it detects an AI agent
+AGENTS.md
+CLAUDE.md
+
+# env files
+.env*
+
+# vercel
+.vercel
+
+# misc
+.DS_Store
+*.pem
+.pnpm-debug.log*

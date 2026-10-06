@@ -1,0 +1,1820 @@
+{
+  "leagues": [
+    {
+      "league": "3.29",
+      "name": "Allflame",
+      "game": "3.29.3.3",
+      "costs_updated_at": "2026-10-06",
+      "reference": {
+        "card": "the-one-with-all",
+        "rate": 8
+      },
+      "weights": {
+        "a-chilling-wind": {
+          "gold": 325,
+          "weight": 340.953
+        },
+        "a-dab-of-ink": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "a-dusty-memory": {
+          "gold": 325,
+          "weight": 340.953
+        },
+        "a-familiar-call": {
+          "gold": 1150,
+          "weight": 8.28067
+        },
+        "a-fate-worse-than-death": {
+          "gold": 525,
+          "weight": 83.9879
+        },
+        "a-modest-request": {
+          "gold": 475,
+          "weight": 112.65
+        },
+        "a-mother-s-parting-gift": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "a-note-in-the-wind": {
+          "gold": 350,
+          "weight": 274.863
+        },
+        "a-sea-of-blue": {
+          "gold": 90,
+          "weight": 9903.38
+        },
+        "a-stone-perfected": {
+          "gold": 425,
+          "weight": 156.004
+        },
+        "abandoned-wealth": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "acclimatisation": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "akil-s-prophecy": {
+          "gold": 400,
+          "weight": 186.236
+        },
+        "alivia-s-grace": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "alluring-bounty": {
+          "gold": 375,
+          "weight": 224.822
+        },
+        "alone-in-the-darkness": {
+          "gold": 100,
+          "weight": 9000
+        },
+        "altered-perception": {
+          "gold": 725,
+          "weight": 32.4643
+        },
+        "ambitious-obsession": {
+          "gold": 1850,
+          "weight": 2.01267
+        },
+        "anarchy-s-price": {
+          "gold": 1250,
+          "weight": 6.46405
+        },
+        "apocalypse": {
+          "gold": 700,
+          "weight": 36.0073
+        },
+        "arrogance-of-the-vaal": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "assassin-s-favour": {
+          "gold": 65,
+          "weight": 13247.9
+        },
+        "assassin-s-gift": {
+          "gold": 1850,
+          "weight": 2.01267
+        },
+        "astral-protection": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "atziri-s-arsenal": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "audacity": {
+          "gold": 525,
+          "weight": 83.9879
+        },
+        "auspicious-ambitions": {
+          "gold": 1150,
+          "weight": 8.28067
+        },
+        "avian-pursuit": {
+          "gold": 500,
+          "weight": 96.9196
+        },
+        "azure-rage": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "azyran-s-reward": {
+          "gold": 300,
+          "weight": 430.09
+        },
+        "baited-expectations": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "beauty-through-death": {
+          "gold": 825,
+          "weight": 22.16
+        },
+        "bijoux": {
+          "gold": 350,
+          "weight": 274.863
+        },
+        "blind-venture": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "boon-of-justice": {
+          "gold": 85,
+          "weight": 10427.8
+        },
+        "boon-of-the-first-ones": {
+          "gold": 225,
+          "weight": 986.645
+        },
+        "bound-by-flame": {
+          "gold": 325,
+          "weight": 340.953
+        },
+        "boundless-realms": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "bowyer-s-dream": {
+          "gold": 425,
+          "weight": 156.004
+        },
+        "broken-truce": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "brother-s-gift": {
+          "gold": 600,
+          "weight": 56.7166
+        },
+        "brother-s-stash": {
+          "gold": 600,
+          "weight": 56.7166
+        },
+        "brotherhood-in-exile": {
+          "gold": 375,
+          "weight": 224.822
+        },
+        "brush-paint-and-palette": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "buried-treasure": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "burning-blood": {
+          "gold": 1050,
+          "weight": 10.8472
+        },
+        "call-to-the-first-ones": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "cameria-s-cut": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "cartographer-s-delight": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "chaotic-disposition": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "chasing-risk": {
+          "gold": 350,
+          "weight": 274.863
+        },
+        "checkmate": {
+          "gold": 325,
+          "weight": 340.953
+        },
+        "choking-guilt": {
+          "gold": 1450,
+          "weight": 4.15763
+        },
+        "costly-curio": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "council-of-cats": {
+          "gold": 350,
+          "weight": 274.863
+        },
+        "coveted-possession": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "cursed-words": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "damnation": {
+          "gold": 1350,
+          "weight": 5.14225
+        },
+        "dark-dreams": {
+          "gold": 500,
+          "weight": 96.9196
+        },
+        "dark-temptation": {
+          "gold": 65,
+          "weight": 13247.9
+        },
+        "darker-half": {
+          "gold": 750,
+          "weight": 29.3714
+        },
+        "deadly-joy": {
+          "gold": 725,
+          "weight": 32.4643
+        },
+        "death": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "deathly-designs": {
+          "gold": 375,
+          "weight": 224.822
+        },
+        "dementophobia": {
+          "gold": 500,
+          "weight": 96.9196
+        },
+        "demigod-s-wager": {
+          "gold": 225,
+          "weight": 986.645
+        },
+        "desecrated-virtue": {
+          "gold": 775,
+          "weight": 26.6593
+        },
+        "desperate-crusade": {
+          "gold": 375,
+          "weight": 224.822
+        },
+        "destined-to-crumble": {
+          "gold": 15,
+          "weight": 45833.3
+        },
+        "dialla-s-subjugation": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "disdain": {
+          "gold": 300,
+          "weight": 430.09
+        },
+        "divine-beauty": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "divine-justice": {
+          "gold": 1850,
+          "weight": 2.01267
+        },
+        "divine-shard": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "doedre-s-madness": {
+          "gold": 50,
+          "weight": 16666.7
+        },
+        "doryani-s-epiphany": {
+          "gold": 450,
+          "weight": 131.981
+        },
+        "draped-in-dreams": {
+          "gold": 625,
+          "weight": 50.2926
+        },
+        "duality": {
+          "gold": 1150,
+          "weight": 8.28067
+        },
+        "dying-anguish": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "dying-light": {
+          "gold": 650,
+          "weight": 44.8036
+        },
+        "earth-drinker": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "echoes-of-love": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "eldritch-perfection": {
+          "gold": 575,
+          "weight": 64.2834
+        },
+        "emperor-of-purity": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "emperor-s-luck": {
+          "gold": 10,
+          "weight": 64285.7
+        },
+        "endless-night": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "energy-sword": {
+          "gold": 500,
+          "weight": 96.9196
+        },
+        "etched-in-blood": {
+          "gold": 700,
+          "weight": 36.0073
+        },
+        "eternal-bonds": {
+          "gold": 725,
+          "weight": 32.4643
+        },
+        "ever-changing": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "fateful-meeting": {
+          "gold": 1150,
+          "weight": 8.28067
+        },
+        "father-s-love": {
+          "gold": 1350,
+          "weight": 5.14225
+        },
+        "fire-of-unknown-origin": {
+          "gold": 925,
+          "weight": 15.794
+        },
+        "forbidden-power": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "friendship": {
+          "gold": 550,
+          "weight": 73.2592
+        },
+        "from-bone-to-ashes": {
+          "gold": 400,
+          "weight": 186.236
+        },
+        "further-invention": {
+          "gold": 850,
+          "weight": 20.2868
+        },
+        "gemcutter-s-mercy": {
+          "gold": 450,
+          "weight": 131.981
+        },
+        "gemcutter-s-promise": {
+          "gold": 85,
+          "weight": 10427.8
+        },
+        "gift-of-asenath": {
+          "gold": 450,
+          "weight": 131.981
+        },
+        "gift-of-the-gemling-queen": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "glimmer-of-hope": {
+          "gold": 65,
+          "weight": 13247.9
+        },
+        "grave-knowledge": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "guardian-s-challenge": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "harmony-of-souls": {
+          "gold": 375,
+          "weight": 224.822
+        },
+        "haunting-shadows": {
+          "gold": 225,
+          "weight": 986.645
+        },
+        "her-mask": {
+          "gold": 70,
+          "weight": 12406
+        },
+        "heterochromia": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "history": {
+          "gold": 1850,
+          "weight": 2.01267
+        },
+        "home": {
+          "gold": 475,
+          "weight": 112.65
+        },
+        "hope": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "house-of-mirrors": {
+          "gold": 1850,
+          "weight": 2.01267
+        },
+        "hubris": {
+          "gold": 120,
+          "weight": 7614.94
+        },
+        "humility": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "hunter-s-resolve": {
+          "gold": 75,
+          "weight": 11666.7
+        },
+        "hunter-s-reward": {
+          "gold": 325,
+          "weight": 340.953
+        },
+        "i-see-brothers": {
+          "gold": 775,
+          "weight": 26.6593
+        },
+        "immortal-resolve": {
+          "gold": 225,
+          "weight": 986.645
+        },
+        "imperfect-memories": {
+          "gold": 650,
+          "weight": 44.8036
+        },
+        "imperial-legacy": {
+          "gold": 55,
+          "weight": 15340.9
+        },
+        "jack-in-the-box": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "judging-voices": {
+          "gold": 400,
+          "weight": 186.236
+        },
+        "justified-ambition": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "keeper-s-corruption": {
+          "gold": 925,
+          "weight": 15.794
+        },
+        "lachrymal-necrosis": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "lantador-s-lost-love": {
+          "gold": 35,
+          "weight": 22619
+        },
+        "last-hope": {
+          "gold": 110,
+          "weight": 8249.16
+        },
+        "last-stand": {
+          "gold": 1150,
+          "weight": 8.28067
+        },
+        "left-to-fate": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "lethean-temptation": {
+          "gold": 475,
+          "weight": 112.65
+        },
+        "light-and-truth": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "lingering-remnants": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "lonely-warrior": {
+          "gold": 1250,
+          "weight": 6.46405
+        },
+        "lost-worlds": {
+          "gold": 80,
+          "weight": 11011.9
+        },
+        "love-through-ice": {
+          "gold": 1350,
+          "weight": 5.14225
+        },
+        "loyalty": {
+          "gold": 20,
+          "weight": 36111.1
+        },
+        "lucky-bastion": {
+          "gold": 850,
+          "weight": 20.2868
+        },
+        "lucky-connections": {
+          "gold": 95,
+          "weight": 9429.82
+        },
+        "lucky-deck": {
+          "gold": 350,
+          "weight": 274.863
+        },
+        "luminous-trove": {
+          "gold": 575,
+          "weight": 64.2834
+        },
+        "lysah-s-respite": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "man-with-bear": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "matryoshka": {
+          "gold": 600,
+          "weight": 56.7166
+        },
+        "mawr-blaidd": {
+          "gold": 350,
+          "weight": 274.863
+        },
+        "merciless-armament": {
+          "gold": 350,
+          "weight": 274.863
+        },
+        "might-is-right": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "misery-in-darkness": {
+          "gold": 450,
+          "weight": 131.981
+        },
+        "mitts": {
+          "gold": 10,
+          "weight": 64285.7
+        },
+        "monochrome": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "more-is-never-enough": {
+          "gold": 30,
+          "weight": 25757.6
+        },
+        "no-traces": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "nook-s-crown": {
+          "gold": 925,
+          "weight": 15.794
+        },
+        "one-last-score": {
+          "gold": 1000,
+          "weight": 12.5359
+        },
+        "outfoxed": {
+          "gold": 1000,
+          "weight": 12.5359
+        },
+        "peaceful-moments": {
+          "gold": 350,
+          "weight": 274.863
+        },
+        "pearls-before-swine": {
+          "gold": 1000,
+          "weight": 12.5359
+        },
+        "perfection": {
+          "gold": 650,
+          "weight": 44.8036
+        },
+        "poisoned-faith": {
+          "gold": 550,
+          "weight": 73.2592
+        },
+        "prejudice": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "pride-before-the-fall": {
+          "gold": 450,
+          "weight": 131.981
+        },
+        "pride-of-the-first-ones": {
+          "gold": 500,
+          "weight": 96.9196
+        },
+        "prometheus-armoury": {
+          "gold": 800,
+          "weight": 24.2711
+        },
+        "prosperity": {
+          "gold": 55,
+          "weight": 15340.9
+        },
+        "rain-of-chaos": {
+          "gold": 5,
+          "weight": 116667
+        },
+        "rain-tempter": {
+          "gold": 55,
+          "weight": 15340.9
+        },
+        "rats": {
+          "gold": 40,
+          "weight": 20192.3
+        },
+        "rebirth": {
+          "gold": 475,
+          "weight": 112.65
+        },
+        "rebirth-and-renewal": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "reckless-ambition": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "reflection-of-the-heart": {
+          "gold": 675,
+          "weight": 40.0854
+        },
+        "remembrance": {
+          "gold": 650,
+          "weight": 44.8036
+        },
+        "runic-luck": {
+          "gold": 550,
+          "weight": 73.2592
+        },
+        "sambodhi-s-vow": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "sambodhi-s-wisdom": {
+          "gold": 575,
+          "weight": 64.2834
+        },
+        "scholar-of-the-seas": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "seven-years-bad-luck": {
+          "gold": 550,
+          "weight": 73.2592
+        },
+        "shard-of-fate": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "silence-and-frost": {
+          "gold": 625,
+          "weight": 50.2926
+        },
+        "society-s-remorse": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "something-dark": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "squandered-prosperity": {
+          "gold": 675,
+          "weight": 40.0854
+        },
+        "struck-by-lightning": {
+          "gold": 95,
+          "weight": 9429.82
+        },
+        "succor-of-the-sinless": {
+          "gold": 775,
+          "weight": 26.6593
+        },
+        "temperance": {
+          "gold": 525,
+          "weight": 83.9879
+        },
+        "terrible-secret-of-space": {
+          "gold": 1250,
+          "weight": 6.46405
+        },
+        "the-academic": {
+          "gold": 400,
+          "weight": 186.236
+        },
+        "the-admirer": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "the-adventuring-spirit": {
+          "gold": 75,
+          "weight": 11666.7
+        },
+        "the-aesthete": {
+          "gold": 120,
+          "weight": 7614.94
+        },
+        "the-apothecary": {
+          "gold": 1100,
+          "weight": 9.4487
+        },
+        "the-archmage-s-right-hand": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-arena-champion": {
+          "gold": 55,
+          "weight": 15340.9
+        },
+        "the-army-of-blood": {
+          "gold": 75,
+          "weight": 11666.7
+        },
+        "the-artist": {
+          "gold": 675,
+          "weight": 40.0854
+        },
+        "the-aspirant": {
+          "gold": 925,
+          "weight": 15.794
+        },
+        "the-astromancer": {
+          "gold": 1450,
+          "weight": 4.15763
+        },
+        "the-avenger": {
+          "gold": 375,
+          "weight": 224.822
+        },
+        "the-awakened": {
+          "gold": 925,
+          "weight": 15.794
+        },
+        "the-battle-born": {
+          "gold": 120,
+          "weight": 7614.94
+        },
+        "the-bear-woman": {
+          "gold": 225,
+          "weight": 986.645
+        },
+        "the-beast": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "the-betrayal": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-bitter-blossom": {
+          "gold": 450,
+          "weight": 131.981
+        },
+        "the-blazing-fire": {
+          "gold": 55,
+          "weight": 15340.9
+        },
+        "the-blessing-of-moosh": {
+          "gold": 375,
+          "weight": 224.822
+        },
+        "the-body": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-bones": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-brawny-battle-mage": {
+          "gold": 375,
+          "weight": 224.822
+        },
+        "the-breach": {
+          "gold": 350,
+          "weight": 274.863
+        },
+        "the-brittle-emperor": {
+          "gold": 450,
+          "weight": 131.981
+        },
+        "the-cache": {
+          "gold": 100,
+          "weight": 9000
+        },
+        "the-cacophony": {
+          "gold": 375,
+          "weight": 224.822
+        },
+        "the-calling": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-card-sharp": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-carrion-crow": {
+          "gold": 25,
+          "weight": 30000
+        },
+        "the-cataclysm": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-catalyst": {
+          "gold": 25,
+          "weight": 30000
+        },
+        "the-catch": {
+          "gold": 925,
+          "weight": 15.794
+        },
+        "the-celestial-justicar": {
+          "gold": 225,
+          "weight": 986.645
+        },
+        "the-celestial-stone": {
+          "gold": 700,
+          "weight": 36.0073
+        },
+        "the-chains-that-bind": {
+          "gold": 70,
+          "weight": 12406
+        },
+        "the-chosen": {
+          "gold": 1250,
+          "weight": 6.46405
+        },
+        "the-coming-storm": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-conduit": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "the-craving": {
+          "gold": 500,
+          "weight": 96.9196
+        },
+        "the-cursed-king": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "the-damned": {
+          "gold": 775,
+          "weight": 26.6593
+        },
+        "the-dapper-prodigy": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-dark-mage": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-darkest-dream": {
+          "gold": 325,
+          "weight": 340.953
+        },
+        "the-deal": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-deceiver": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "the-deep-ones": {
+          "gold": 400,
+          "weight": 186.236
+        },
+        "the-demon": {
+          "gold": 1850,
+          "weight": 2.01267
+        },
+        "the-demoness": {
+          "gold": 65,
+          "weight": 13247.9
+        },
+        "the-destination": {
+          "gold": 925,
+          "weight": 15.794
+        },
+        "the-doctor": {
+          "gold": 925,
+          "weight": 15.794
+        },
+        "the-doppelganger": {
+          "gold": 35,
+          "weight": 22619
+        },
+        "the-dragon": {
+          "gold": 110,
+          "weight": 8249.16
+        },
+        "the-dragon-s-heart": {
+          "gold": 675,
+          "weight": 40.0854
+        },
+        "the-dreamer": {
+          "gold": 425,
+          "weight": 156.004
+        },
+        "the-dreamland": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-drunken-aristocrat": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-dungeon-master": {
+          "gold": 300,
+          "weight": 430.09
+        },
+        "the-easy-stroll": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "the-eldritch-decay": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "the-encroaching-darkness": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-endless-darkness": {
+          "gold": 925,
+          "weight": 15.794
+        },
+        "the-endurance": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-enforcer": {
+          "gold": 1100,
+          "weight": 9.4487
+        },
+        "the-enlightened": {
+          "gold": 525,
+          "weight": 83.9879
+        },
+        "the-enthusiasts": {
+          "gold": 300,
+          "weight": 430.09
+        },
+        "the-escape": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "the-eternal-war": {
+          "gold": 950,
+          "weight": 14.5942
+        },
+        "the-ethereal": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "the-everlasting": {
+          "gold": 775,
+          "weight": 26.6593
+        },
+        "the-explorer": {
+          "gold": 85,
+          "weight": 10427.8
+        },
+        "the-eye-of-terror": {
+          "gold": 1150,
+          "weight": 8.28067
+        },
+        "the-eye-of-the-dragon": {
+          "gold": 575,
+          "weight": 64.2834
+        },
+        "the-fathomless-depths": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "the-feast": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-fiend": {
+          "gold": 1350,
+          "weight": 5.14225
+        },
+        "the-finishing-touch": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-fishmonger": {
+          "gold": 825,
+          "weight": 22.16
+        },
+        "the-fletcher": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-flora-s-gift": {
+          "gold": 25,
+          "weight": 30000
+        },
+        "the-fool": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-forbidden-fruit": {
+          "gold": 1150,
+          "weight": 8.28067
+        },
+        "the-forgotten-treasure": {
+          "gold": 325,
+          "weight": 340.953
+        },
+        "the-formless-sea": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-forsaken": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-fortunate": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "the-forward-gaze": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-fox": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-fox-in-the-brambles": {
+          "gold": 225,
+          "weight": 986.645
+        },
+        "the-gambler": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-garish-power": {
+          "gold": 500,
+          "weight": 96.9196
+        },
+        "the-gemcutter": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-gentleman": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-gladiator": {
+          "gold": 120,
+          "weight": 7614.94
+        },
+        "the-golden-era": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "the-greatest-intentions": {
+          "gold": 1350,
+          "weight": 5.14225
+        },
+        "the-gulf": {
+          "gold": 650,
+          "weight": 44.8036
+        },
+        "the-hale-heart": {
+          "gold": 650,
+          "weight": 44.8036
+        },
+        "the-harvester": {
+          "gold": 40,
+          "weight": 20192.3
+        },
+        "the-hermit": {
+          "gold": 35,
+          "weight": 22619
+        },
+        "the-heroic-shot": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-hive-of-knowledge": {
+          "gold": 800,
+          "weight": 24.2711
+        },
+        "the-hoarder": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-hook": {
+          "gold": 475,
+          "weight": 112.65
+        },
+        "the-hunger": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "the-immortal": {
+          "gold": 825,
+          "weight": 22.16
+        },
+        "the-incantation": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-innocent": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-inoculated": {
+          "gold": 105,
+          "weight": 8608.06
+        },
+        "the-insane-cat": {
+          "gold": 1850,
+          "weight": 2.01267
+        },
+        "the-insatiable": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "the-inventor": {
+          "gold": 105,
+          "weight": 8608.06
+        },
+        "the-jester": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-jeweller-s-boon": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-journalist": {
+          "gold": 55,
+          "weight": 15340.9
+        },
+        "the-journey": {
+          "gold": 225,
+          "weight": 986.645
+        },
+        "the-king-s-blade": {
+          "gold": 15,
+          "weight": 45833.3
+        },
+        "the-king-s-heart": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-lake": {
+          "gold": 1500,
+          "weight": 3.75868
+        },
+        "the-last-laugh": {
+          "gold": 650,
+          "weight": 44.8036
+        },
+        "the-last-one-standing": {
+          "gold": 850,
+          "weight": 20.2868
+        },
+        "the-last-supper": {
+          "gold": 1025,
+          "weight": 11.6508
+        },
+        "the-leviathan": {
+          "gold": 775,
+          "weight": 26.6593
+        },
+        "the-lich": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-life-thief": {
+          "gold": 575,
+          "weight": 64.2834
+        },
+        "the-lion": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-long-con": {
+          "gold": 600,
+          "weight": 56.7166
+        },
+        "the-long-watch": {
+          "gold": 550,
+          "weight": 73.2592
+        },
+        "the-lord-in-black": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-lord-of-celebration": {
+          "gold": 225,
+          "weight": 986.645
+        },
+        "the-lover": {
+          "gold": 10,
+          "weight": 64285.7
+        },
+        "the-lunaris-priestess": {
+          "gold": 90,
+          "weight": 9903.38
+        },
+        "the-mad-king": {
+          "gold": 300,
+          "weight": 430.09
+        },
+        "the-magma-crab": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-master-artisan": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-mayor": {
+          "gold": 425,
+          "weight": 156.004
+        },
+        "the-mercenary": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "the-messenger": {
+          "gold": 300,
+          "weight": 430.09
+        },
+        "the-metalsmith-s-gift": {
+          "gold": 20,
+          "weight": 36111.1
+        },
+        "the-mind-s-eyes": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-miracle": {
+          "gold": 750,
+          "weight": 29.3714
+        },
+        "the-mountain": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-nurse": {
+          "gold": 450,
+          "weight": 131.981
+        },
+        "the-oath": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "the-offering": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-offspring": {
+          "gold": 325,
+          "weight": 340.953
+        },
+        "the-old-man": {
+          "gold": 1600,
+          "weight": 3.10171
+        },
+        "the-one-that-got-away": {
+          "gold": 1450,
+          "weight": 4.15763
+        },
+        "the-one-with-all": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-opulent": {
+          "gold": 55,
+          "weight": 15340.9
+        },
+        "the-pack-leader": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "the-pact": {
+          "gold": 300,
+          "weight": 430.09
+        },
+        "the-patient": {
+          "gold": 225,
+          "weight": 986.645
+        },
+        "the-penitent": {
+          "gold": 115,
+          "weight": 7919.25
+        },
+        "the-poet": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-polymath": {
+          "gold": 375,
+          "weight": 224.822
+        },
+        "the-porcupine": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-price-of-devotion": {
+          "gold": 1850,
+          "weight": 2.01267
+        },
+        "the-price-of-loyalty": {
+          "gold": 1600,
+          "weight": 3.10171
+        },
+        "the-price-of-prescience": {
+          "gold": 375,
+          "weight": 224.822
+        },
+        "the-price-of-protection": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "the-primordial": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-prince-of-darkness": {
+          "gold": 375,
+          "weight": 224.822
+        },
+        "the-professor": {
+          "gold": 400,
+          "weight": 186.236
+        },
+        "the-progeny-of-lunaris": {
+          "gold": 725,
+          "weight": 32.4643
+        },
+        "the-queen": {
+          "gold": 400,
+          "weight": 186.236
+        },
+        "the-rabbit-s-foot": {
+          "gold": 575,
+          "weight": 64.2834
+        },
+        "the-rabid-rhoa": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-realm": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-return-of-the-rat": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-risk": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-rite-of-elements": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-road-to-power": {
+          "gold": 350,
+          "weight": 274.863
+        },
+        "the-rusted-bard": {
+          "gold": 425,
+          "weight": 156.004
+        },
+        "the-ruthless-ceinture": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-sacrifice": {
+          "gold": 650,
+          "weight": 44.8036
+        },
+        "the-saint-s-treasure": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-samurai-s-eye": {
+          "gold": 525,
+          "weight": 83.9879
+        },
+        "the-scarred-meadow": {
+          "gold": 35,
+          "weight": 22619
+        },
+        "the-scavenger": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-scholar": {
+          "gold": 15,
+          "weight": 45833.3
+        },
+        "the-scout": {
+          "gold": 325,
+          "weight": 340.953
+        },
+        "the-seeker": {
+          "gold": 325,
+          "weight": 340.953
+        },
+        "the-sephirot": {
+          "gold": 325,
+          "weight": 340.953
+        },
+        "the-shepherd-s-sandals": {
+          "gold": 350,
+          "weight": 274.863
+        },
+        "the-shieldbearer": {
+          "gold": 925,
+          "weight": 15.794
+        },
+        "the-shortcut": {
+          "gold": 425,
+          "weight": 156.004
+        },
+        "the-side-quest": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "the-sigil": {
+          "gold": 90,
+          "weight": 9903.38
+        },
+        "the-silly-boy": {
+          "gold": 700,
+          "weight": 36.0073
+        },
+        "the-siren": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "the-skeleton": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-slumbering-beast": {
+          "gold": 500,
+          "weight": 96.9196
+        },
+        "the-soul": {
+          "gold": 900,
+          "weight": 17.1291
+        },
+        "the-spark-and-the-flame": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "the-spoiled-prince": {
+          "gold": 225,
+          "weight": 986.645
+        },
+        "the-standoff": {
+          "gold": 110,
+          "weight": 8249.16
+        },
+        "the-stormcaller": {
+          "gold": 110,
+          "weight": 8249.16
+        },
+        "the-strategist": {
+          "gold": 700,
+          "weight": 36.0073
+        },
+        "the-summoner": {
+          "gold": 110,
+          "weight": 8249.16
+        },
+        "the-sun": {
+          "gold": 60,
+          "weight": 14215.7
+        },
+        "the-surgeon": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-surveyor": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-survivalist": {
+          "gold": 90,
+          "weight": 9903.38
+        },
+        "the-sword-king-s-salute": {
+          "gold": 45,
+          "weight": 18254
+        },
+        "the-thaumaturgist": {
+          "gold": 450,
+          "weight": 131.981
+        },
+        "the-throne": {
+          "gold": 400,
+          "weight": 186.236
+        },
+        "the-tinkerer-s-table": {
+          "gold": 350,
+          "weight": 274.863
+        },
+        "the-tireless-extractor": {
+          "gold": 70,
+          "weight": 12406
+        },
+        "the-tower": {
+          "gold": 100,
+          "weight": 9000
+        },
+        "the-traitor": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-transformation": {
+          "gold": 325,
+          "weight": 340.953
+        },
+        "the-trial": {
+          "gold": 115,
+          "weight": 7919.25
+        },
+        "the-tumbleweed": {
+          "gold": 725,
+          "weight": 32.4643
+        },
+        "the-twilight-moon": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-twins": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-tyrant": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-undaunted": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-undisputed": {
+          "gold": 825,
+          "weight": 22.16
+        },
+        "the-unexpected-prize": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-union": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "the-valkyrie": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-vast": {
+          "gold": 1200,
+          "weight": 7.29752
+        },
+        "the-visionary": {
+          "gold": 75,
+          "weight": 11666.7
+        },
+        "the-void": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-warden": {
+          "gold": 70,
+          "weight": 12406
+        },
+        "the-warlord": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "the-watcher": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-web": {
+          "gold": 95,
+          "weight": 9429.82
+        },
+        "the-wedding-gift": {
+          "gold": 550,
+          "weight": 73.2592
+        },
+        "the-white-knight": {
+          "gold": 650,
+          "weight": 44.8036
+        },
+        "the-whiteout": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-wilted-rose": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-wind": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-witch": {
+          "gold": 40,
+          "weight": 20192.3
+        },
+        "the-wolf": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-wolf-s-legacy": {
+          "gold": 150,
+          "weight": 3138.75
+        },
+        "the-wolf-s-shadow": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "the-wolven-king-s-bite": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "the-wolverine": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "the-world-eater": {
+          "gold": 925,
+          "weight": 15.794
+        },
+        "the-wrath": {
+          "gold": 85,
+          "weight": 10427.8
+        },
+        "the-wretched": {
+          "gold": 125,
+          "weight": 5253.93
+        },
+        "thirst-for-knowledge": {
+          "gold": 90,
+          "weight": 9903.38
+        },
+        "three-faces-in-the-dark": {
+          "gold": 25,
+          "weight": 30000
+        },
+        "three-voices": {
+          "gold": 55,
+          "weight": 15340.9
+        },
+        "thunderous-skies": {
+          "gold": 65,
+          "weight": 13247.9
+        },
+        "time-lost-relic": {
+          "gold": 105,
+          "weight": 8608.06
+        },
+        "toxic-tidings": {
+          "gold": 375,
+          "weight": 224.822
+        },
+        "tranquillity": {
+          "gold": 950,
+          "weight": 14.5942
+        },
+        "treasure-hunter": {
+          "gold": 225,
+          "weight": 986.645
+        },
+        "triskaidekaphobia": {
+          "gold": 200,
+          "weight": 1383.14
+        },
+        "turn-the-other-cheek": {
+          "gold": 250,
+          "weight": 728.547
+        },
+        "unchained": {
+          "gold": 275,
+          "weight": 553.288
+        },
+        "underground-forest": {
+          "gold": 350,
+          "weight": 274.863
+        },
+        "unrequited-love": {
+          "gold": 1450,
+          "weight": 4.15763
+        },
+        "vanity": {
+          "gold": 225,
+          "weight": 986.645
+        },
+        "vile-power": {
+          "gold": 175,
+          "weight": 2025.33
+        },
+        "vinia-s-token": {
+          "gold": 60,
+          "weight": 14215.7
+        },
+        "void-of-the-elements": {
+          "gold": 875,
+          "weight": 18.6189
+        },
+        "volatile-power": {
+          "gold": 110,
+          "weight": 8249.16
+        },
+        "wealth-and-power": {
+          "gold": 675,
+          "weight": 40.0854
+        },
+        "when-currents-blaze": {
+          "gold": 875,
+          "weight": 18.6189
+        },
+        "who-asked": {
+          "gold": 1000,
+          "weight": 12.5359
+        },
+        "winter-s-embrace": {
+          "gold": 600,
+          "weight": 56.7166
+        }
+      }
+    }
+  ]
+}
