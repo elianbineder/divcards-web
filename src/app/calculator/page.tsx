@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { getExport } from "@/lib/api";
 import { toSummary } from "@/lib/cards";
 import { defaultReference, leagueLabel, leagueViews } from "@/lib/leagues";
-import { DropCalculator, type WeightedCard } from "@/components/DropCalculator";
+import { BackButton } from "@/components/BackButton";
+import { CalculatorBody, DropCalculator, type WeightedCard } from "@/components/DropCalculator";
 
 export const revalidate = 3600;
 
@@ -17,15 +19,18 @@ export default async function CalculatorPage() {
   const weighted: WeightedCard[] = cards
     .filter((c) => c.enabled && c.weight && c.scryable)
     .map(toSummary)
-    .map(({ slug, name, art, areas, weight }) => ({ slug, name, art, areas, weight: weight! }))
+    .map(({ slug, name, art, areas, dropLevel, weight }) => ({ slug, name, art, areas, dropLevel, weight: weight! }))
     .sort((a, b) => a.name.localeCompare(b.name));
   const league = leagueViews(meta, cards).find((l) => l.current);
   // A default whose card is no longer in the calculator (disabled, no weight) is dropped.
   const reference = defaultReference(meta.costs?.league);
   const initial = reference && weighted.some((c) => c.slug === reference.card) ? reference : null;
 
+  const calculator = { cards: weighted, diffs: league?.diffs ?? {}, previous: league?.previous ?? null, initial };
+
   return (
     <div className="flex flex-col gap-5">
+      <BackButton />
       <header>
         <h1 className="font-game text-4xl">Drop rate calculator</h1>
         <p className="mt-1 text-sm text-muted">
@@ -49,12 +54,10 @@ export default async function CalculatorPage() {
         </p>
       </details>
 
-      <DropCalculator
-        cards={weighted}
-        diffs={league?.diffs ?? {}}
-        previous={league?.previous ?? null}
-        initial={initial}
-      />
+      {/* The inputs come from the URL, known only in the browser: the static page shows the defaults. */}
+      <Suspense fallback={<CalculatorBody {...calculator} params={null} />}>
+        <DropCalculator {...calculator} />
+      </Suspense>
     </div>
   );
 }

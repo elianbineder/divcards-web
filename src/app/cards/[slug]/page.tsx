@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { API_URL, getCard, getExport, type Card } from "@/lib/api";
+import { getCard, getExport, type Card } from "@/lib/api";
+import { minTierFor, tierAreaLevel } from "@/lib/filters";
 import { KIND_STYLE, REWARD_KINDS, formatWeight, poedbUrl, rarity, tagLabel, tierLabel, tierOrder } from "@/lib/cards";
+import { BackButton } from "@/components/BackButton";
 import { DivCard } from "@/components/DivCard";
 import { GameText } from "@/components/GameText";
 
@@ -40,9 +42,7 @@ export default async function CardPage({ params }: PageProps<"/cards/[slug]">) {
   return (
     <article className="flex flex-col gap-6">
       <nav className="flex items-center justify-between gap-4 text-sm text-muted">
-        <Link href="/" className="hover:text-foreground">
-          ← All cards
-        </Link>
+        <BackButton />
         <div className="flex gap-4">
           {prev && <Link href={`/cards/${prev.slug}`} className="hover:text-foreground">‹ {prev.text.name}</Link>}
           {next && <Link href={`/cards/${next.slug}`} className="hover:text-foreground">{next.text.name} ›</Link>}
@@ -102,13 +102,6 @@ export default async function CardPage({ params }: PageProps<"/cards/[slug]">) {
               </ul>
             </Panel>
           )}
-
-          <p className="text-xs text-muted">
-            Data:{" "}
-            <a className="underline hover:text-foreground" href={`${API_URL}/v1/cards/${card.slug}`}>
-              /v1/cards/{card.slug}
-            </a>
-          </p>
         </div>
       </div>
     </article>
@@ -141,8 +134,9 @@ function RewardPanel({ card }: { card: Card }) {
     <Panel title="Reward">
       <div className="flex items-start gap-4">
         {reward.item?.icon && (
+          // Lazy: an eager image is preloaded by every page that prefetches this one (the index).
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={reward.item.icon} alt="" className="h-16 w-16 shrink-0 object-contain" />
+          <img src={reward.item.icon} alt="" loading="lazy" className="h-16 w-16 shrink-0 object-contain" />
         )}
         <div className="min-w-0">
           <GameText lines={card.text.reward} className="font-game text-xl leading-snug" />
@@ -215,20 +209,25 @@ function DropsPanel({ card }: { card: Card }) {
         <p className="text-sm text-muted">No atlas map (Non-Scryable): global drop or other content.</p>
       ) : (
         <ul className="grid grid-cols-[repeat(auto-fill,minmax(15rem,1fr))] gap-2">
-          {areas.map((a) => (
-            <li key={a.id}>
-              <Link
-                href={`/?map=${a.id}`}
-                className="flex items-center justify-between gap-3 rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-muted"
-              >
-                <span className={`min-w-0 font-game text-base ${a.unique_map ? "s-uniqueitem" : ""}`}>{a.name}</span>
-                <span className="shrink-0 text-xs text-muted">
-                  {tierLabel(a.tier)} · lvl {a.area_level}
-                  {!a.on_atlas && " · off atlas"}
-                </span>
-              </Link>
-            </li>
-          ))}
+          {areas.map((a) => {
+            // A map run at its base tier may be below the card's drop level: say from which tier it drops.
+            const from = typeof a.tier === "number" && card.drop_level > tierAreaLevel(a.tier) ? minTierFor(card.drop_level) : null;
+            return (
+              <li key={a.id}>
+                <Link
+                  href={from ? `/?map=${a.id}&tier=${from}` : `/?map=${a.id}`}
+                  className="flex items-center justify-between gap-3 rounded-md border border-border bg-background px-3 py-2 text-sm hover:border-muted"
+                >
+                  <span className={`min-w-0 font-game text-base ${a.unique_map ? "s-uniqueitem" : ""}`}>{a.name}</span>
+                  <span className="shrink-0 text-xs text-muted">
+                    {tierLabel(a.tier)}
+                    {from && <span className="text-accent"> · drops from T{from}</span>}
+                    {!a.on_atlas && " · off atlas"}
+                  </span>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       )}
     </Panel>

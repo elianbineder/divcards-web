@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getExport } from "@/lib/api";
 import { leagueViews } from "@/lib/leagues";
+import { BackButton } from "@/components/BackButton";
 import { HistoryTable, type HistoryCard, type HistoryLeague } from "@/components/HistoryTable";
 
 export const revalidate = 3600;
@@ -25,6 +26,7 @@ export default async function HistoryPage() {
 
   return (
     <div className="flex flex-col gap-5">
+      <BackButton />
       <header>
         <h1 className="font-game text-4xl">Weight history</h1>
         <p className="mt-1 text-sm text-muted">

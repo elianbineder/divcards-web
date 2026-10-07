@@ -1,16 +1,32 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
-import { formatWeight, tierLabel, type CardSummary } from "@/lib/cards";
+import { useSearchParams } from "next/navigation";
+import { useMemo, useState } from "react";
+import { formatWeight, type CardSummary } from "@/lib/cards";
+import { MAX_TIER, mapAreaLevel } from "@/lib/filters";
 import type { DefaultReference, WeightDiff } from "@/lib/leagues";
 import { CardPicker } from "./CardPicker";
 import { WeightDiffBadge } from "./WeightDiffBadge";
 
 /** A card that has a weight: the only ones the calculator can use. */
-export type WeightedCard = Pick<CardSummary, "slug" | "name" | "art" | "areas"> & { weight: number };
+export type WeightedCard = Pick<CardSummary, "slug" | "name" | "art" | "areas" | "dropLevel"> & { weight: number };
 
 type SortKey = "rate" | "name" | "perCard";
+
+interface CalculatorProps {
+  cards: WeightedCard[];
+  /** Reference card and rate the page opens with (see defaultReference). */
+  initial: DefaultReference | null;
+  /** Weight changes from the previous league. */
+  diffs: Record<string, WeightDiff>;
+  previous: string | null;
+}
+
+/** The calculator with its inputs read from the URL, so a calculation can be shared. */
+export function DropCalculator(props: CalculatorProps) {
+  return <CalculatorBody {...props} params={useSearchParams()} />;
+}
 
 
 /**
@@ -21,55 +37,45 @@ type SortKey = "rate" | "name" | "perCard";
  * other card is expected at `weight(card) / total weighting` per map. The reference card
  * may come from any map: the total weighting applies to every map.
  */
-export function DropCalculator({
+/** The calculator for given URL parameters; with none (static render), its defaults. */
+export function CalculatorBody({
   cards,
   diffs,
   previous,
   initial,
-}: {
-  cards: WeightedCard[];
-  /** Reference card and rate the page opens with (see defaultReference). */
-  initial: DefaultReference | null;
-  /** Weight changes from the previous league. */
-  diffs: Record<string, WeightDiff>;
-  previous: string | null;
-}) {
+  params,
+}: CalculatorProps & { params: URLSearchParams | null }) {
   const bySlug = useMemo(() => new Map(cards.map((c) => [c.slug, c])), [cards]);
   const defaultCard = initial?.card ?? "";
   const defaultRate = initial ? String(initial.rate) : "";
-  const [refSlug, setRefSlug] = useState(defaultCard);
-  const [rateText, setRateText] = useState(defaultRate);
-  const [map, setMap] = useState("");
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<{ key: SortKey; desc: boolean }>({ key: "rate", desc: true });
 
-  // Inputs live in the URL so a calculation can be shared.
-  const [urlRead, setUrlRead] = useState(false);
-  useEffect(() => {
+  // Inputs live in the URL; the defaults stay out of it, a cleared rate is kept ("rate=").
+  const refSlug = params?.get("ref") ?? defaultCard;
+  const rateText = params?.has("rate") ? (params.get("rate") ?? "") : defaultRate;
+  const map = params?.get("map") ?? "";
+  const tierParam = Number(params?.get("tier"));
+  const tier = Number.isInteger(tierParam) && tierParam >= 1 && tierParam <= MAX_TIER ? tierParam : null;
+  const update = (changes: Record<string, string | null>) => {
     const p = new URLSearchParams(window.location.search);
-    /* eslint-disable react-hooks/set-state-in-effect -- the URL is only known in the browser */
-    setRefSlug(p.get("ref") ?? defaultCard);
-    setRateText(p.get("rate") ?? defaultRate);
-    setMap(p.get("map") ?? "");
-    setUrlRead(true);
-    /* eslint-enable react-hooks/set-state-in-effect */
-  }, [defaultCard, defaultRate]);
-  useEffect(() => {
-    if (!urlRead) return;
-    const p = new URLSearchParams();
-    // The defaults stay out of the URL; a cleared rate is kept ("rate=").
-    if (refSlug !== defaultCard) p.set("ref", refSlug);
-    if (rateText !== defaultRate) p.set("rate", rateText);
-    if (map) p.set("map", map);
-    const query = p.toString();
-    if (query !== window.location.search.slice(1)) {
-      window.history.replaceState(null, "", query ? `?${query}` : window.location.pathname);
+    for (const [key, value] of Object.entries(changes)) {
+      if (value == null) p.delete(key);
+      else p.set(key, value);
     }
-  }, [refSlug, rateText, map, urlRead, defaultCard, defaultRate]);
+    const q = p.toString();
+    window.history.replaceState(null, "", q ? `?${q}` : window.location.pathname);
+  };
+  const setRefSlug = (slug: string) => update({ ref: slug === defaultCard ? null : slug });
+  const setRateText = (text: string) => update({ rate: text === defaultRate ? null : text });
+  const setMap = (id: string) => update({ map: id || null, tier: null });
+  const setTier = (t: number | null) => update({ tier: t == null ? null : String(t) });
 
   const ref = bySlug.get(refSlug) ?? null;
-  const rate = Number(rateText);
-  const valid = ref != null && rateText.trim() !== "" && Number.isFinite(rate) && rate > 0;
+  // Accepts a decimal comma as well as a point ("0,5" = "0.5").
+  const rate = Number(rateText.trim().replace(",", "."));
+  const rateOk = rateText.trim() !== "" && Number.isFinite(rate) && rate > 0;
+  const valid = ref != null && rateOk;
   const totalWeighting = valid ? ref.weight / rate : null;
 
   const maps = useMemo(() => {
@@ -78,9 +84,17 @@ export function DropCalculator({
     return [...all.values()].sort((a, b) => a.name.localeCompare(b.name));
   }, [cards]);
   const area = maps.find((a) => a.id === map) ?? null;
+  const baseTier = area && typeof area.tier === "number" ? area.tier : null;
+  const runTier = baseTier == null ? null : Math.max(baseTier, tier ?? baseTier);
 
-  /** Cards that drop in the chosen map. */
-  const pool = useMemo(() => (area ? cards.filter((c) => c.areas.some((a) => a.id === area.id)) : cards), [cards, area]);
+  /** Cards that drop in the chosen map at the chosen tier (its area level reaches their drop level). */
+  const pool = useMemo(
+    () =>
+      area
+        ? cards.filter((c) => c.areas.some((a) => a.id === area.id) && c.dropLevel <= mapAreaLevel(area, tier))
+        : cards,
+    [cards, area, tier],
+  );
 
   const rows = useMemo(() => {
     if (totalWeighting == null) return [];
@@ -114,7 +128,7 @@ export function DropCalculator({
           conditions.
         </p>
 
-        <div className="mt-4 grid gap-4 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+        <div className="mt-4 grid gap-4 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)_6rem]">
           <label className="flex flex-col gap-1.5 text-sm text-muted">
             Reference card
             <CardPicker cards={cards} value={ref} onChange={(c) => setRefSlug(c.slug)} label="Reference card" />
@@ -129,9 +143,29 @@ export function DropCalculator({
               <option value="">All cards</option>
               {maps.map((a) => (
                 <option key={a.id} value={a.id}>
-                  {a.name} ({tierLabel(a.tier)})
+                  {a.name}
                 </option>
               ))}
+            </select>
+          </label>
+          <label className="flex flex-col gap-1.5 text-sm text-muted">
+            Tier
+            {/* From the map's base tier up to T16: a map cannot be run below its base tier. */}
+            <select
+              value={runTier ?? ""}
+              disabled={baseTier == null}
+              onChange={(e) => setTier(Number(e.target.value) === baseTier ? null : Number(e.target.value))}
+              className="h-10 rounded-md border border-border bg-background px-2 text-sm text-foreground outline-none focus:border-accent disabled:opacity-50"
+            >
+              {baseTier == null ? (
+                <option value="">–</option>
+              ) : (
+                Array.from({ length: MAX_TIER - baseTier + 1 }, (_, i) => baseTier + i).map((t) => (
+                  <option key={t} value={t}>
+                    T{t}
+                  </option>
+                ))
+              )}
             </select>
           </label>
         </div>
@@ -139,15 +173,14 @@ export function DropCalculator({
         <div className="mt-4 grid overflow-hidden rounded-md border border-border sm:grid-cols-3">
           <Cell label={ref ? `${ref.name} avg per map` : "Avg per map"}>
             <input
-              type="number"
+              type="text"
               inputMode="decimal"
-              min={0}
-              step="any"
+              autoComplete="off"
               value={rateText}
               onChange={(e) => setRateText(e.target.value)}
               placeholder="e.g. 8"
               aria-label="Average drops of the reference card per map"
-              className="w-full [appearance:textfield] bg-transparent text-center text-2xl tabular-nums text-foreground outline-none placeholder:text-muted/50 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+              className="w-full bg-transparent text-center text-2xl tabular-nums text-foreground outline-none placeholder:text-muted/50"
             />
           </Cell>
           <Cell label="Weighting of card">
@@ -165,14 +198,20 @@ export function DropCalculator({
         )}
         <p className="mt-3 text-xs text-muted">
           {area
-            ? `${pool.length} card${pool.length === 1 ? "" : "s"} drop in ${area.name}.`
+            ? `${pool.length} card${pool.length === 1 ? "" : "s"} drop in ${area.name}${runTier ? ` at T${runTier}` : ""}.`
             : `${cards.length} cards that drop in atlas maps.`}
         </p>
       </section>
 
       {totalWeighting == null ? (
         <p className="py-10 text-center text-muted">
-          Pick a reference card and enter its average drops per map to see the estimates.
+          {refSlug && !ref
+            ? `"${refSlug}" is not available: the calculator only uses cards that drop in atlas maps and have a weight.`
+            : !ref
+              ? "Pick a reference card and enter its average drops per map to see the estimates."
+              : rateText.trim() === ""
+                ? `Enter the average drops per map of ${ref.name} to see the estimates.`
+                : "The average per map must be a number above 0, such as 8 or 0.5."}
         </p>
       ) : (
         <section className="flex flex-col gap-3">

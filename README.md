@@ -76,7 +76,11 @@ src/
     components/
         DivCard.tsx           a card drawn over the game frame, text scaled to fit
         GameText.tsx          in-game styled text (item colours, sizes, glyphs)
-        Gallery.tsx           search, filters menu, league, sorting and the card grid
+        Gallery.tsx           the card grid for the filters in the URL
+        HeaderSearch.tsx      header search and Filters menu (sort, league, reward type, map, tier)
+        useFilters.ts         reads and writes the index filters in the URL
+        BackButton.tsx        back to the previous page, filters included
+        ScrollTopButton.tsx   floating back-to-top arrow
         DropCalculator.tsx    the calculator (reference card, rate, map, results table)
         CardPicker.tsx        card search box of the calculator
         HistoryTable.tsx      weights table of the history page
@@ -87,6 +91,7 @@ src/
     lib/
         api.ts                API types and the cached export request
         cards.ts              lean card data for the browser, sorting and labels
+        filters.ts            index filters <-> URL, and map tiers (area level = 67 + tier)
         leagues.ts            leagues with weights and their changes from the previous one
 scripts/
     snapshot-league.mjs       saves the current league's weights into league-history.json
